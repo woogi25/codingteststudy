@@ -1,0 +1,9 @@
+def solution(lottos, win_nums):
+    zero = lottos.count(0)
+    a= [x for x in lottos if x in win_nums]
+    max = zero+len(a)
+    min = len(a)
+
+    max = 7- max if max >=1 else 6
+    min = 7- min if min >=1 else 6
+    return [max,min]
